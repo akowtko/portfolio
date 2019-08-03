@@ -1,17 +1,29 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+      <v-toolbar-title class="headline text-uppercase font-weight-lighty primary--color">
+        Nicole Kowtko
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        icon
+        small
+        :href="github"
         target="_blank"
       >
-        <span class="mr-2">Latest Release</span>
+        <v-icon>
+          fab fa-github
+        </v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        small
+        :href="linkedIn"
+        target="_blank"
+      >
+        <v-icon color="blue">
+          fab fa-linkedin
+        </v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -23,12 +35,13 @@
 
 <script>
 
-export default {
-  name: 'App',
-  components: {
-  },
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    name: 'App',
+    components: {
+    },
+    data: () => ({
+      linkedIn: 'https://www.linkedin.com/in/antonia-nicole-kowtko-724a7749/',
+      github: 'https://github.com/akowtko',
+    }),
+  };
 </script>
