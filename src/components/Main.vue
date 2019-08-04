@@ -1,26 +1,45 @@
 <template>
-  <v-parallax style="height:100%" :src="splash">
+  <v-parallax
+        style="height:100%"
+        :src="require('../assets/unsplash-bkd.jpg')">
     <v-container fill-height>
       <v-layout
-        style="height:80%"
+        column
         align-center
         justify-space-between
       >
-        <v-flex xs5>
-          <v-img
-            max-height="500px"
-            :src="headshot"
-            contain/>
+        <v-flex xs11 pt-3>
+          <v-layout
+            align-center
+            justify-space-between
+          >
+            <v-flex xs5>
+              <v-img
+                height="450px"
+                :src="headshot"
+                contain/>
+            </v-flex>
+            <v-flex xs6 ml-3>
+              <v-card outlined width="100%" class="display-2 primary--color pa-3" style="border:2px solid #FF7D75;">
+                {{caption}}
+                <div class="headline pt-2">I'm passionate about web development, edge cases, and cross-team collaboration.</div>
+              </v-card>
+            </v-flex>
+          </v-layout>
         </v-flex>
-        <v-flex xs6 ml-3>
-          <v-card outlined width="100%" class="display-1 primary--color pa-3" style="border:2px solid #FF7D75;">
-            {{caption}}
-          </v-card>
+        <v-flex xs1>
+          <v-btn
+            icon
+            small
+            to="about"
+            class="secondary--color"
+          >
+            <v-icon size="35">mdi-chevron-down</v-icon>
+          </v-btn>
         </v-flex>
       </v-layout>
     </v-container>
   </v-parallax>
-
 </template>
 
 <script>
@@ -42,3 +61,7 @@
     }),
   };
 </script>
+
+<style>
+
+</style>
