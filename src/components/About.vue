@@ -6,28 +6,28 @@
       align-center
     >
       <v-flex xs1 class="display-3 pt-2">
-        <span class="secondary--color">About</span>&nbsp;
-        <span class="primary--color">Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="secondary--text text--lighten-1">About</span>&nbsp;
+        <span class="primary--text">Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       </v-flex>
       <v-flex xs11 d-flex>
         <v-layout
           justify-space-around
           align-center
         >
-          <v-flex xs5 v-html="aboutMe" class="body-1 background--color">
+          <v-flex xs5 v-html="aboutMe" class="body-1 background--text">
           </v-flex>
           <v-flex xs5 offset-xs1 class="secondary--background--opqaue">
             <v-list
               dense
-              color="#A2E0D2"
-              class="background--color"
+              color="secondary"
+              class="background--text"
             >
               <v-list-item
                 v-for="highlight in highlights"
                 :key="highlight"
               >
-                <v-list-item-icon class="background--color">
-                  <v-icon class="background--color">mdi-circle-small</v-icon>
+                <v-list-item-icon class="background--text">
+                  <v-icon color="background">mdi-circle-small</v-icon>
                   {{highlight}}
                 </v-list-item-icon>
               </v-list-item>

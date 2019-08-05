@@ -20,7 +20,7 @@
                 contain/>
             </v-flex>
             <v-flex xs6 ml-3>
-              <v-card outlined width="100%" class="display-2 primary--color pa-3" style="border:2px solid #FF7D75;">
+              <v-card outlined width="100%" class="display-2 primary--text pa-3" style="border:2px solid #FF7D75;">
                 {{caption}}
                 <div class="headline pt-2">I'm passionate about web development, edge cases, and cross-team collaboration.</div>
               </v-card>
@@ -29,12 +29,13 @@
         </v-flex>
         <v-flex xs1>
           <v-btn
-            icon
             small
+            outlined
             to="about"
-            class="secondary--color"
+            color="secondary darken-2"
           >
-            <v-icon size="35">mdi-chevron-down</v-icon>
+            About Me
+            <v-icon size="30">mdi-chevron-down</v-icon>
           </v-btn>
         </v-flex>
       </v-layout>

@@ -8,7 +8,7 @@
         <template v-slot:activator="{ on }">
           <v-app-bar-nav-icon
             v-on="on"
-            class="primary--color"
+            color="primary"
             slot="activator"
           />
         </template>
@@ -17,19 +17,23 @@
             v-for="item in menu"
             :key="item.text"
             :to="item.to"
-            >
+          >
             <v-list-item-icon class="mr-3">
-              <v-icon class="primary--color">{{item.icon}}</v-icon>
+              <v-icon color="primary">{{item.icon}}</v-icon>
             </v-list-item-icon>
-            <v-list-item-content class="primary--color">
+            <v-list-item-content class="primary--text">
               <v-list-item-title>{{item.text}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-toolbar-title class="headline text-uppercase font-weight-lighty primary--color">
-        Nicole Kowtko
-      </v-toolbar-title>
+      <router-link to="/" style="text-decoration: none;">
+        <v-toolbar-title
+          class="headline text-uppercase font-weight-light primary--text"
+        >
+          Nicole Kowtko
+        </v-toolbar-title>
+      </router-link>
       <v-spacer></v-spacer>
       <v-btn
         icon
@@ -47,7 +51,7 @@
         :href="linkedIn"
         target="_blank"
       >
-        <v-icon color="blue">
+        <v-icon>
           fab fa-linkedin
         </v-icon>
       </v-btn>
@@ -55,7 +59,7 @@
 
     <v-content>
 
-        <router-view/>
+      <router-view/>
 
     </v-content>
   </v-app>
@@ -86,9 +90,3 @@
   };
 </script>
 
-<style>
-  .v-list-item--active, .v-list-item--active .v-icon, .v-list-item--active .v-list-item__content {
-    color: #A2E0D2 !important;
-  }
-
-</style>
