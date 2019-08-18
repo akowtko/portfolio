@@ -1,7 +1,7 @@
 <template>
   <v-parallax
         style="height:100%"
-        :src="require('../assets/unsplash-bkd.jpg')">
+        :src="splash">
     <v-container fill-height>
       <v-layout
         column

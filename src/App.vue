@@ -1,5 +1,37 @@
 <template>
   <v-app>
+    <v-banner
+      v-model="cookieBanner"
+      two-line
+      sticky
+      style="border-bottom: 1px solid #A2E0D2"
+    >
+    <v-avatar
+      slot="icon"
+      color="secondary"
+      size="40"
+    >
+      <v-icon
+        icon="mdi-lock"
+        color="white"
+      >
+        mdi-lock
+      </v-icon>
+    </v-avatar>
+      This site uses cookies to provide you with a great user experience, and help us figure out how this site is being used. Cookies are only used through Google Analytics and are anonymous on our end. Click decline to opt out of cookies.
+    <template v-slot:actions>
+      <v-btn
+        @click="acceptCookies(false)"
+        text
+        color="secondary"
+      >Decline</v-btn>
+      <v-btn
+        @click="acceptCookies(true)"
+        outlined
+        color="secondary"
+      >Accept</v-btn>
+    </template>
+  </v-banner>
     <v-app-bar app>
       <v-menu
         bottom
@@ -37,7 +69,6 @@
       <v-spacer></v-spacer>
       <v-btn
         icon
-        small
         :href="github"
         target="_blank"
       >
@@ -47,7 +78,6 @@
       </v-btn>
       <v-btn
         icon
-        small
         :href="linkedIn"
         target="_blank"
       >
@@ -72,6 +102,7 @@
     components: {
     },
     data: () => ({
+      cookieBanner: true,
       linkedIn: 'https://www.linkedin.com/in/antonia-nicole-kowtko-724a7749/',
       github: 'https://github.com/akowtko',
       menu: [
@@ -84,9 +115,21 @@
           'text': 'About',
           'icon': 'mdi-information-outline',
           'to': 'about'
+        },
+        {
+          'text': 'Projects',
+          'icon': 'mdi-file-document',
+          'to': 'projects'
         }
       ]
     }),
+    methods: {
+      acceptCookies(status) {
+        if (status) this.$ga.enable();
+        else this.$ga.disable();
+        this.cookieBanner = false;
+      },
+    },
   };
 </script>
 
