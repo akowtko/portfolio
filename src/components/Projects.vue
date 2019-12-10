@@ -85,7 +85,7 @@ To engineer Botsy we decided on a serverless architecture, AWS Lambda. This is b
     }),
     methods: {
       derp() {
-        console.log('hi');
+        return 'hi';
       }
     },
   }
