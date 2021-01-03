@@ -4,7 +4,6 @@
       v-model="cookieBanner"
       two-line
       sticky
-      style="border-bottom: 1px solid #A2E0D2"
     >
     <v-avatar
       slot="icon"

@@ -7,7 +7,7 @@
     >
       <v-flex xs1 class="display-3 pt-2">
         <span class="secondary--text text--lighten-1">About</span>&nbsp;
-        <span class="primary--text">Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="primary--text pr-1">Me</span>
       </v-flex>
       <v-flex xs11 d-flex>
         <v-layout
